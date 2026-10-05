@@ -1,0 +1,25 @@
+Validation performed October 3, 2026
+
+Version 2.1.0 Horizon update:
+PASS: all 22 trait categories and all 86 spell entries match the supplied wiki
+      page's membership, names, levels, nonblank costs and normalized weights.
+PASS: user-confirmed BP overrides: Geist Wall 3, Winds of Promyvion 4,
+      Blood Saber 3. Custom level-56 Winds of Promyvion can be selected.
+PASS: combined BP accounting including Seedspray 2; Beast Killer II;
+      Fast Cast tier 0; unknown Auto Refresh contributions remain explicit.
+The original regression suite below was rerun and passed after these changes.
+
+PASS: all distributed Lua files compile using LuaJIT 2.1 (via lupa 2.8).
+PASS: 213 model/data assertions: level band boundaries, level-75 Assimilation,
+      spell ID conversion, set/unset, learned/level/points/slot checks,
+      unknown spell cost handling, data integrity, and trait contributions.
+PASS: mocked backend: main/subjob offsets and native setter arguments,
+      missing player, invalid job, null inventory pointer, uninitialized
+      job buffer, and missing client signatures.
+PASS: mocked addon events/UI: all tabs rendered, spell click handled,
+      client list refresh, commands, unrelated command passthrough,
+      and non-BLU job transition.
+
+NOT VERIFIED: actual in-game UI rendering; live 32-bit FFXI memory signatures;
+Horizon server acceptance; Horizon-specific spell/trait rules and limits.
+The mocks verify integration logic, not binary/API compatibility in a live game.
